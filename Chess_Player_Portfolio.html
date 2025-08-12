@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sravan Gupta — Chess Player Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#ffb86b;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{background:linear-gradient(180deg,#071026 0%, #08122a 60%);color:#e6eef6;padding:32px}
+    .container{max-width:1100px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar{width:86px;height:86px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#ff7ab6);display:flex;align-items:center;justify-content:center;font-weight:800;color:#071022;font-size:28px;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:0;color:var(--muted);font-size:13px}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:22px}
+
+    /* Left column */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);backdrop-filter:blur(6px);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .bio{display:flex;gap:18px;align-items:center}
+    .bio .photo{width:120px;height:120px;border-radius:12px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
+    .bio .meta h2{margin:0 0 6px 0;font-size:22px}
+    .meta .role{color:var(--accent);font-weight:600}
+    .stats{display:flex;gap:12px;margin-top:12px}
+    .stat{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:10px;border-radius:10px;text-align:center;flex:1}
+    .stat h3{margin:0;font-size:18px}
+    .stat p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
+
+    /* Achievements / List */
+    .section{margin-top:18px}
+    .section h3{margin:0 0 12px 0;font-size:16px}
+    .achievements{display:flex;flex-direction:column;gap:10px}
+    .ach-item{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;background:var(--card)}
+    .ach-item small{color:var(--muted)}
+
+    /* Right column */
+    .side{position:sticky;top:28px}
+    .widget{margin-bottom:16px}
+    .badge{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600}
+
+    .games-embed{height:220px;border-radius:10px;overflow:hidden;background:linear-gradient(180deg,#061125,#09122b);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .gallery img{width:100%;height:82px;object-fit:cover;border-radius:8px}
+
+    /* footer */
+    footer{margin-top:20px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:980px){
+      .grid{grid-template-columns:1fr;}
+      .avatar{width:64px;height:64px;font-size:20px}
+      .bio .photo{width:96px;height:96px}
+      .side{position:static}
+      .gallery img{height:72px}
+    }
+
+    /* subtle buttons */
+    .btn{background:linear-gradient(90deg,var(--accent),#ff7ab6);color:#071022;padding:10px 14px;border-radius:10px;font-weight:700;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+
+    .chip{padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">SG</div>
+        <div>
+          <h1>Sravan Gupta — Professional Chess Player</h1>
+          <p class="lead">FIDE Rating 2205 • Blitz specialist • Coach • Representing Uttar Pradesh</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a class="btn" href="#contact">Contact / Book</a>
+        <a class="btn ghost" href="#resume">Download CV</a>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section>
+        <div class="card bio">
+          <div class="photo">PHOTO</div>
+          <div class="meta">
+            <h2>Sravan Gupta <span class="role">(National Master)</span></h2>
+            <p class="lead">Age: 24 • Years active: 12 • Coach: GM S. Reddy</p>
+            <div class="stats">
+              <div class="stat"><h3>2205</h3><p>FIDE</p></div>
+              <div class="stat"><h3>2290</h3><p>Rapid</p></div>
+              <div class="stat"><h3>2350</h3><p>Peak</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h3>Key Achievements</h3>
+          <div class="achievements">
+            <div class="ach-item"><div>
+              <strong>1st — Uttar Pradesh State Open 2024</strong>
+              <div><small>Scored 7/9, performance 2450</small></div>
+            </div><div class="chip">Gold</div></div>
+
+            <div class="ach-item"><div>
+              <strong>Runner-up — National Junior 2022</strong>
+              <div><small>Top seed, notable wins vs IMs</small></div>
+            </div><div class="chip">2022</div></div>
+
+            <div class="ach-item"><div>
+              <strong>Represented India — Asian Youth 2018</strong>
+              <div><small>Team event, board 2</small></div>
+            </div><div class="chip">Intl</div></div>
+          </div>
+
+          <h3 style="margin-top:16px">Coaching & Services</h3>
+          <p class="lead" style="margin-top:6px">Private coaching (online/offline), tournament preparation, opening repertoire building, game analysis and live commentary for events.</p>
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <span class="badge">One-on-one Coaching</span>
+            <span class="badge">Group Workshops</span>
+            <span class="badge">Game Analysis</span>
+            <span class="badge">Simuls & Exhibitions</span>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h3>Recent Tournaments</h3>
+          <ul style="padding-left:18px;color:var(--muted);margin:8px 0 0 0;line-height:1.6">
+            <li>June 2025 — Lucknow Open • 6/9 • Top 10</li>
+            <li>March 2025 — Kanpur Rapid • 7/9 • 2nd Place</li>
+            <li>Dec 2024 — National League • Board 3 • Team: GNCIPL</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>Gallery</h3>
+          <div class="gallery" style="margin-top:10px">
+            <img src="https://picsum.photos/300/200?1" alt="photo1">
+            <img src="https://picsum.photos/300/200?2" alt="photo2">
+            <img src="https://picsum.photos/300/200?3" alt="photo3">
+            <img src="https://picsum.photos/300/200?4" alt="photo4">
+            <img src="https://picsum.photos/300/200?5" alt="photo5">
+            <img src="https://picsum.photos/300/200?6" alt="photo6">
+          </div>
+        </div>
+
+        <div class="card section" id="contact">
+          <h3>Contact & Booking</h3>
+          <p class="lead">For coaching rates, event invites or commentary requests — reach out via the contact form or email.</p>
+          <form style="margin-top:12px;display:grid;gap:10px">
+            <input placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+            <input placeholder="Your email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+            <textarea placeholder="Message / booking details" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+            <div style="display:flex;gap:8px">
+              <button class="btn" type="button">Send Message</button>
+              <button class="btn ghost" type="button">Clear</button>
+            </div>
+          </form>
+        </div>
+
+      </section>
+
+      <aside class="side">
+        <div class="card widget">
+          <h3 style="margin:0 0 12px 0">Live Games</h3>
+          <div class="games-embed">
+            <!-- Replace with Lichess/Chess.com embed iframe if desired -->
+            <div style="text-align:center">
+              <div style="font-weight:700">Live game viewer</div>
+              <div style="color:var(--muted);font-size:13px;margin-top:6px">Add an iframe from Lichess or embed PGN here</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card widget">
+          <h3 style="margin:0 0 12px 0">Player Highlights</h3>
+          <ul style="margin:0;padding-left:18px;color:var(--muted);line-height:1.6">
+            <li>Favourite opening: King's Indian Defence</li>
+            <li>Preferred time control: Rapid & Blitz</li>
+            <li>Streaming: Weekly analysis on YouTube</li>
+          </ul>
+        </div>
+
+        <div class="card widget">
+          <h3 style="margin:0 0 12px 0">Contact</h3>
+          <p style="margin:0;color:var(--muted)">Email: <strong style="color:#fff">sravan.chess@email.com</strong></p>
+          <p style="margin:6px 0 0 0;color:var(--muted)">Phone: <strong style="color:#fff">+91 98765 43210</strong></p>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="btn ghost" href="#">Instagram</a>
+            <a class="btn ghost" href="#">Lichess</a>
+          </div>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      <div>© 2025 Sravan Gupta — Chess Portfolio</div>
+      <div style="color:var(--muted)">Made with ❤️ • Customize this template</div>
+    </footer>
+  </div>
+</body>
+</html>
